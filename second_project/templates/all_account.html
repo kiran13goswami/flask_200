@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mx-auto mt-10">
+
+    <h2 class="text-2xl font-bold mb-6 text-center text-green-500">
+        All Accounts
+    </h2>
+
+    <table class="table-auto w-full border-collapse border border-gray-300">
+
+        <thead class="bg-green-100">
+            <tr>
+                <th class="border p-2">ID</th>
+                <th class="border p-2">Account No</th>
+                <th class="border p-2">Name</th>
+                <th class="border p-2">Mobile</th>
+                <th class="border p-2">Address</th>
+                <th class="border p-2">Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for acc in accounts %}
+            <tr class="text-center">
+                <td class="border p-2">{{ acc.id }}</td>
+                <td class="border p-2">{{ acc.ac_no }}</td>
+                <td class="border p-2">{{ acc.name }}</td>
+                <td class="border p-2">{{ acc.mobile }}</td>
+                <td class="border p-2">{{ acc.address }}</td>
+                <td class="border p-2">
+                    <a href="{{ url_for('update', id=acc.id) }}"
+                       class="bg-blue-500 text-white px-2 py-1 rounded">
+                        Edit
+                    </a>
+
+                    <a href="{{ url_for('delete', id=acc.id) }}"
+                       class="bg-red-500 text-white px-2 py-1 rounded ml-2">
+                        Delete
+                    </a>
+                    <a href="#"
+                     class="bg-green-500 text-white px-2 py-1 rounded">
+                     View
+                 </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

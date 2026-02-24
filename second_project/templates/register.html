@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register Account</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-r from-green-100 to-blue-100 min-h-screen flex items-center justify-center">
+
+<div class="w-full max-w-md bg-white p-8 rounded-2xl shadow-2xl">
+
+    <h2 class="text-3xl font-bold text-center text-green-600 mb-6">
+        Register Account
+    </h2>
+
+    <form action="{{ url_for('register') }}" method="POST">
+
+        <div class="mb-4">
+            <label class="block mb-2">Account Number</label>
+            <input type="text" name="account_number" class="w-full border rounded-lg px-3 py-2" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="block mb-2">Name</label>
+            <input type="text" name="name" class="w-full border rounded-lg px-3 py-2" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="block mb-2">Mobile</label>
+            <input type="text" name="mobile" class="w-full border rounded-lg px-3 py-2" required>
+        </div>
+
+        <div class="mb-4">
+            <label class="block mb-2">Address</label>
+            <textarea name="address" class="w-full border rounded-lg px-3 py-2" required></textarea>
+        </div>
+
+        <button type="submit"
+            class="w-full bg-orange-500 text-white py-2 rounded-lg hover:bg-orange-600 transition">
+            Create Account
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

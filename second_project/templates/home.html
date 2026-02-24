@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- ================= HERO SECTION ================= -->
+  <section class="min-h-screen flex items-center pt-32">
+    <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+
+      <!-- Left Content -->
+      <div class="md:w-1/2 text-center md:text-left space-y-6">
+
+        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+          Build Powerful  
+          <span class="bg-gradient-to-r from-green-500 to-yellow-500 bg-clip-text text-transparent">
+            APIs
+          </span>  
+          Faster Than Ever
+        </h1>
+
+        <p class="text-lg text-gray-600 max-w-lg mx-auto md:mx-0">
+          Design, test, and deploy scalable APIs with elegance. 
+          Experience blazing performance, clean architecture, 
+          and beautiful integrations.
+        </p>
+
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-4">
+
+          <button class="px-8 py-3 rounded-full text-white bg-gradient-to-r from-green-500 to-yellow-500 shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300">
+            Explore APIs
+          </button>
+
+          <button class="px-8 py-3 rounded-full border-2 border-green-400 text-green-500 hover:bg-orange-400 hover:text-white transition duration-300">
+            Documentation
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Right Image -->
+      <div class="md:w-1/3 ml-16 mb-12 md:mb-0 flex justify-center">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-3xl blur-2xl opacity-30"></div>
+          <img 
+            src="https://dummyimage.com/720x600" 
+            alt="Hero Image" 
+            class="relative rounded-3xl shadow-2xl transform hover:scale-105 transition duration-500"
+          />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FEATURES SECTION ================= -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center">
+
+      <h2 class="text-4xl font-bold mb-12">
+        Why Choose <span class="text-orange-500">My-APIs?</span>
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 bg-gradient-to-br from-orange-50 to-yellow-50">
+          <h3 class="text-xl font-semibold mb-4">⚡ Lightning Fast</h3>
+          <p class="text-gray-600">
+            Optimized infrastructure ensures blazing fast response times.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 bg-gradient-to-br from-orange-50 to-yellow-50">
+          <h3 class="text-xl font-semibold mb-4">🔒 Secure by Default</h3>
+          <p class="text-gray-600">
+            Enterprise-grade security built into every endpoint.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-2xl shadow-lg hover:shadow-2xl transition duration-300 bg-gradient-to-br from-orange-50 to-yellow-50">
+          <h3 class="text-xl font-semibold mb-4">🚀 Easy Deployment</h3>
+          <p class="text-gray-600">
+            Deploy and scale effortlessly with modern cloud solutions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+{% endblock content %}
